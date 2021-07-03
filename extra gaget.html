@@ -1,0 +1,751 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="jquery-1.12.4.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("a[href*='#PageHeader1']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#PageHeader1').offset().top }, 600, 'linear');
+   });
+   $("#FileUpload1 :file").on('change', function()
+   {
+      var input = $(this).parents('.input-group').find(':text');
+      input.val($(this).val());
+   });
+});
+</script>
+</head>
+<body>
+<div id="PageHeader1" style="position:absolute;overflow:hidden;text-align:center;left:0px;top:0px;width:100%;height:100px;z-index:18;">
+<div id="PageHeader1_Container" style="width:970px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<div id="wb_JavaScript6" style="position:absolute;left:751px;top:7px;width:219px;height:85px;z-index:0;">
+<div id="greeting" style="font-family:Arial;font-size:27px;color:#000000;font-weight:normal;font-style:normal;text-align:left;text-decoration:none;"></div> 
+<script>
+var datenow = new Date(); 
+var timenow = datenow.getTime(); 
+datenow.setTime(timenow); 
+var hournow = datenow.getHours(); 
+var greeting = document.getElementById('greeting');
+if (hournow >= 18)
+{ 
+   greeting.innerHTML = "Good Evening!"; 
+}
+else 
+if (hournow >= 12) 
+{
+   greeting.innerHTML = "Good Afternoon!"; 
+}
+else 
+{
+   greeting.innerHTML = "Good Morning!"; 
+}
+</script></div>
+</div>
+</div>
+<div id="wb_LayoutGrid2">
+<div id="LayoutGrid2">
+<div class="row">
+<div class="col-1">
+<div id="wb_MediaPlayer2" style="display:inline-block;width:100%;z-index:1;">
+<video id="MediaPlayer2" autoplay controls>
+<source src="">
+</video>
+
+</div>
+</div>
+<div class="col-2">
+</div>
+<div class="col-3">
+<div id="wb_MediaPlayer1" style="display:inline-block;width:100%;z-index:2;">
+<audio id="MediaPlayer1" autoplay controls>
+<source src="">
+</audio>
+
+</div>
+</div>
+<div class="col-4">
+<div id="wb_YouTube2" style="display:inline-block;width:100%;z-index:3;">
+<iframe id="YouTube2" src="https://www.youtube.com/embed/ojocCQpHLh4?rel=1&amp;autoplay=1&amp;autohide=0"></iframe>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid3">
+<div id="LayoutGrid3">
+<div class="row">
+<div class="col-1">
+<div style="z-index:4">
+<script>
+var disabled_message = "";
+document.oncontextmenu = function() 
+{ 
+   return false; 
+}
+document.onmousedown = function md(e) 
+{ 
+  try 
+  { 
+     if (event.button==2||event.button==3) 
+     {
+        if (disabled_message != '')
+           alert(disabled_message);
+        return false; 
+     }
+  }  
+  catch (e) 
+  { 
+     if (e.which == 3) return false; 
+  } 
+}
+</script>
+</div>
+
+</div>
+<div class="col-2">
+<div id="FileUpload1" class="input-group" style="display:table;width: 100%;height:50px;z-index:5;">
+<input class="form-control" type="text" readonly="">
+<label class="input-group-btn">
+<input type="file" accept=".7z,.jpeg,.jpg,.png,.rar,.zip" name="FileUpload" id="FileUpload1-file" style="display:none;" multiple><span class="btn">Browse...</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_JavaScript5" style="position:absolute;left:369px;top:22px;width:940px;height:56px;z-index:13;">
+<script>
+
+/*
+RAINBOW TEXT Script by Matt Hedgecoe (c) 2002
+Featured on JavaScript Kit
+For this script, visit http://www.javascriptkit.com
+*/
+
+var text="Mr.Hacker";
+var speed=80;
+
+if (document.all||document.getElementById)
+{
+   document.write('<div style="font-family:Arial;font-size:27px;font-weight:normal;font-style:normal;text-align:left;text-decoration:none;" id="highlight">' + text + '<\/div>');
+   var storetext=document.getElementById? document.getElementById("highlight") : document.all.highlight;
+}
+else
+   document.write(text);
+
+var hex=new Array("00","14","28","3C","50","64","78","8C","A0","B4","C8","DC","F0");
+var r=1;
+var g=1;
+var b=1;
+var seq=1;
+function changetext()
+{
+   rainbow="#"+hex[r]+hex[g]+hex[b];
+   storetext.style.color=rainbow;
+}
+function change()
+{
+   if (seq==6)
+   {
+      b--;
+      if (b==0)
+        seq=1;
+   }
+   if (seq==5)
+   {
+      r++;
+      if (r==12)
+         seq=6;
+   }
+   if (seq==4)
+   {
+      g--;
+      if (g==0)
+         seq=5;
+   }
+   if (seq==3)
+   {
+      b++;
+      if (b==12)
+         seq=4;
+   }
+   if (seq==2)
+   {
+      r--;
+      if (r==0)
+         seq=3;
+   }
+   if (seq==1)
+   {
+      g++;
+      if (g==12)
+         seq=2;
+   }
+   changetext();
+}
+
+function starteffect()
+{
+   if (document.all||document.getElementById)
+      flash=setInterval("change()",speed);
+}
+starteffect();
+</script>
+
+</div>
+
+<div style="z-index:6">
+<marquee id="breakingnews" style="padding:4px 0px 4px 0px;position:absolute;left:0px;top:0;background-color:#FFFFE6" onMouseover="this.scrollAmount=1" onMouseout="this.scrollAmount=6">
+<span style="color:#FF0000;font-size:16px;font-family:Arial;font-weight:normal;font-style:normal;text-decoration:none">Breaking News: A new version of WYSIWYG Web Builder is now available!</span>
+</marquee>
+<script>
+function initBreakingNews()
+{
+   var docWidth = 800;
+
+   if (typeof window.innerWidth != 'undefined')
+   {
+      docWidth = window.innerWidth;
+   }
+   else 
+   if (typeof document.documentElement != 'undefined' && typeof document.documentElement.clientWidth != 'undefined' && document.documentElement.clientWidth != 0)
+   {
+      docWidth = document.documentElement.clientWidth;
+   }
+   else
+   {
+      docWidth = document.getElementsByTagName('body')[0].clientWidth;
+   }
+   document.getElementById("breakingnews").style.width = docWidth.toString() + "px";
+   document.getElementById("breakingnews").scrollAmount = 6;
+   document.getElementById("breakingnews").scrollDelay = 20;
+   document.getElementById("breakingnews").loop = -1;
+}
+if (document.getElementById)
+{
+   window.onload = initBreakingNews;
+   window.onresize = initBreakingNews;
+}
+</script>
+</div>
+
+</div>
+<div id="PageFooter1" style="position:absolute;overflow:hidden;text-align:center;left:0px;top:520px;width:100%;height:104px;z-index:15;">
+<div id="PageFooter1_Container" style="width:970px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<div id="wb_JavaScript3" style="position:absolute;left:0px;top:9px;width:151px;height:54px;z-index:7;">
+<a href="https://www.youtube.com/WYSIWYGWebBuilderOfficial" rel="nofollow"><img style="width:75px;height:30px;border-width:0;" alt="WYSIWYG Web Builder on YouTube" title="WYSIWYG Web Builder on YouTube" src="logo_youtube.gif"></a></div>
+<div id="wb_JavaScript4" style="position:absolute;left:151px;top:10px;width:149px;height:53px;z-index:8;">
+<a href="https://twitter.com/wysiwyg_wb" rel="nofollow"><img style="width:82px;height:28px;border-width:0;" alt="WYSIWYG Web Builder on Twitter" title="WYSIWYG Web Builder on Twitter" src="logo_twitter.gif"></a></div>
+<div id="wb_JavaScript7" style="position:absolute;left:378px;top:36px;width:524px;height:56px;z-index:9;">
+<div style="color:black;font-size:16px;font-family:Arial;font-weight:normal;font-style:normal;text-align:left;text-decoration:none" id="typewriter"></div>
+<script>
+var ch = 0;
+var txt = 'Welcome to Mr.Hacker . ';
+var speed = 50;
+var pause = 5000;
+
+function typeWriterInit()
+{
+   ch = 0; 
+   document.getElementById("typewriter").innerHTML = '';
+   typeWriter();
+}
+function typeWriter() 
+{
+   if (ch < txt.length) 
+   {
+      document.getElementById("typewriter").innerHTML += txt.charAt(ch);
+      ch++;
+      setTimeout(typeWriter, speed);
+   }
+   else
+   {
+      if (pause > 0)
+      {
+          setTimeout(typeWriterInit, pause);
+      }
+   }
+}
+typeWriterInit();
+</script></div>
+</div>
+</div>
+<div style="z-index:16">
+<marquee id="breakingnews" style="padding:4px 0px 4px 0px;position:absolute;left:0px;top:0;background-color:#FFFFE6" onMouseover="this.scrollAmount=1" onMouseout="this.scrollAmount=6">
+<span style="color:#FF0000;font-size:16px;font-family:Arial;font-weight:normal;font-style:normal;text-decoration:none">Breaking News: A new version of WYSIWYG Web Builder is now available!</span>
+</marquee>
+<script>
+function initBreakingNews()
+{
+   var docWidth = 800;
+
+   if (typeof window.innerWidth != 'undefined')
+   {
+      docWidth = window.innerWidth;
+   }
+   else 
+   if (typeof document.documentElement != 'undefined' && typeof document.documentElement.clientWidth != 'undefined' && document.documentElement.clientWidth != 0)
+   {
+      docWidth = document.documentElement.clientWidth;
+   }
+   else
+   {
+      docWidth = document.getElementsByTagName('body')[0].clientWidth;
+   }
+   document.getElementById("breakingnews").style.width = docWidth.toString() + "px";
+   document.getElementById("breakingnews").scrollAmount = 6;
+   document.getElementById("breakingnews").scrollDelay = 20;
+   document.getElementById("breakingnews").loop = -1;
+}
+if (document.getElementById)
+{
+   window.onload = initBreakingNews;
+   window.onresize = initBreakingNews;
+}
+</script>
+</div>
+<div style="z-index:17">
+<script>
+var disabled_message = "";
+document.oncontextmenu = function() 
+{ 
+   return false; 
+}
+document.onmousedown = function md(e) 
+{ 
+  try 
+  { 
+     if (event.button==2||event.button==3) 
+     {
+        if (disabled_message != '')
+           alert(disabled_message);
+        return false; 
+     }
+  }  
+  catch (e) 
+  { 
+     if (e.which == 3) return false; 
+  } 
+}
+</script>
+</div>
+</body>
+<style>
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+input:focus, textarea:focus, select:focus
+{
+   outline: none;
+}
+#PageHeader1
+{
+   background-clip: padding-box;
+   background-color: transparent;
+   background-image: none;
+   box-sizing: border-box;
+}
+#MediaPlayer1
+{
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#wb_MediaPlayer1
+{
+   display: block;
+   position: relative;
+   margin: 0;
+   height: 39px;
+   vertical-align: top;
+}
+#MediaPlayer2
+{
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#wb_MediaPlayer2
+{
+   display: block;
+   position: relative;
+   margin: 0;
+   height: 120px;
+   vertical-align: top;
+}
+#YouTube1
+{
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   border-width: 0;
+}
+#wb_YouTube1
+{
+   display: block;
+   position: relative;
+   margin: 0;
+   height: 0;
+   overflow: hidden;
+   box-sizing: border-box;
+   padding-bottom: 56.25%;
+   padding-left: 0;
+   padding-right: 0;
+   padding-top: 0;
+}
+#wb_LayoutGrid2
+{
+   clear: both;
+   position: relative;
+   table-layout: fixed;
+   display: table;
+   text-align: center;
+   width: 100%;
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #CCCCCC;
+   box-sizing: border-box;
+   margin: 0;
+}
+#LayoutGrid2
+{
+   box-sizing: border-box;
+   padding: 0px 15px 0px 15px;
+   margin-right: auto;
+   margin-left: auto;
+}
+#LayoutGrid2 > .row
+{
+   margin-right: -15px;
+   margin-left: -15px;
+}
+#LayoutGrid2 > .row > .col-1, #LayoutGrid2 > .row > .col-2, #LayoutGrid2 > .row > .col-3, #LayoutGrid2 > .row > .col-4
+{
+   box-sizing: border-box;
+   font-size: 0px;
+   min-height: 1px;
+   padding-right: 15px;
+   padding-left: 15px;
+   position: relative;
+}
+#LayoutGrid2 > .row > .col-1, #LayoutGrid2 > .row > .col-2, #LayoutGrid2 > .row > .col-3, #LayoutGrid2 > .row > .col-4
+{
+   float: left;
+}
+#LayoutGrid2 > .row > .col-1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   width: 25%;
+   text-align: left;
+}
+#LayoutGrid2 > .row > .col-2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   width: 25%;
+   text-align: left;
+}
+#LayoutGrid2 > .row > .col-3
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   width: 25%;
+   text-align: left;
+}
+#LayoutGrid2 > .row > .col-4
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   width: 25%;
+   text-align: left;
+}
+#LayoutGrid2:before,
+#LayoutGrid2:after,
+#LayoutGrid2 .row:before,
+#LayoutGrid2 .row:after
+{
+   display: table;
+   content: " ";
+}
+#LayoutGrid2:after,
+#LayoutGrid2 .row:after
+{
+   clear: both;
+}
+@media (max-width: 480px)
+{
+#LayoutGrid2 > .row > .col-1, #LayoutGrid2 > .row > .col-2, #LayoutGrid2 > .row > .col-3, #LayoutGrid2 > .row > .col-4
+{
+   float: none;
+   width: 100% !important;
+}
+}
+#YouTube2
+{
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   border-width: 0;
+}
+#wb_YouTube2
+{
+   display: block;
+   position: relative;
+   margin: 0;
+   height: 0;
+   overflow: hidden;
+   box-sizing: border-box;
+   padding-bottom: 56.25%;
+   padding-left: 0;
+   padding-right: 0;
+   padding-top: 0;
+}
+#wb_LayoutGrid3
+{
+   clear: both;
+   position: relative;
+   table-layout: fixed;
+   display: table;
+   text-align: center;
+   width: 100%;
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #CCCCCC;
+   box-sizing: border-box;
+   margin: 0;
+}
+#LayoutGrid3
+{
+   box-sizing: border-box;
+   padding: 0px 15px 0px 15px;
+   margin-right: auto;
+   margin-left: auto;
+}
+#LayoutGrid3 > .row
+{
+   margin-right: -15px;
+   margin-left: -15px;
+}
+#LayoutGrid3 > .row > .col-1, #LayoutGrid3 > .row > .col-2
+{
+   box-sizing: border-box;
+   font-size: 0px;
+   min-height: 1px;
+   padding-right: 15px;
+   padding-left: 15px;
+   position: relative;
+}
+#LayoutGrid3 > .row > .col-1, #LayoutGrid3 > .row > .col-2
+{
+   float: left;
+}
+#LayoutGrid3 > .row > .col-1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   width: 50%;
+   text-align: left;
+}
+#LayoutGrid3 > .row > .col-2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   width: 50%;
+   text-align: left;
+}
+#LayoutGrid3:before,
+#LayoutGrid3:after,
+#LayoutGrid3 .row:before,
+#LayoutGrid3 .row:after
+{
+   display: table;
+   content: " ";
+}
+#LayoutGrid3:after,
+#LayoutGrid3 .row:after
+{
+   clear: both;
+}
+@media (max-width: 480px)
+{
+#LayoutGrid3 > .row > .col-1, #LayoutGrid3 > .row > .col-2
+{
+   float: none;
+   width: 100% !important;
+}
+}
+#FileUpload1 *
+{
+   box-sizing: border-box;
+}
+#FileUpload1
+{
+   display: table;
+   border-collapse: separate;
+   margin: 0;
+}
+#FileUpload1 .form-control
+{
+   display: block;
+   width: 100%;
+   height: 50px;
+   line-height: 42px;
+   padding: 4px 4px 4px 4px;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+   color: #555555;
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 1px solid #CCCCCC;
+   border-radius: 4px;
+}
+#FileUpload1 .form-control
+{
+   position: relative;
+   z-index: 2;
+   float: left;
+   width: 100%;
+   margin-bottom: 0px;
+}
+#FileUpload1 label
+{
+   display: inline-block;
+   margin-bottom: 5px;
+   font-weight: 700;
+}
+#FileUpload1 .input-group-btn, FileUpload1 .form-control
+{
+   display: table-cell;
+}
+#FileUpload1 :first-child.form-control, FileUpload1 :first-child.input-group-btn > .btn, FileUpload1 :first-child.input-group-btn > .btn-group > .btn, FileUpload1 :last-child.input-group-btn > :not(:last-child):not(.dropdown-toggle).btn, FileUpload1 :last-child.input-group-btn > :not(:last-child).btn-group > .btn
+{
+   border-bottom-right-radius: 0px;
+   border-top-right-radius: 0px;
+}
+#FileUpload1 .input-group-btn
+{
+   width: 1%;
+   white-space: nowrap;
+   vertical-align: middle;
+   position: relative;
+   font-size: 0px;
+   white-space: nowrap;
+}
+#FileUpload1 .btn
+{
+   display: inline-block;
+   margin-bottom: 0px;
+   font-weight: 400;
+   text-align: center;
+   vertical-align: middle;
+   cursor: pointer;
+   background-color: #428BCA;
+   background-image: none;
+   border: 1px solid #357EBD;
+   color: #FFFFFF;
+   white-space: nowrap;
+   padding: 4px 8px 4px 8px;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+   line-height: 42px;
+   border-radius: 4px;
+   height: 50px;
+}
+#FileUpload1 .input-group-btn > .btn
+{
+   position: relative;
+}
+#FileUpload1 :last-child.form-control, #FileUpload1 :last-child.input-group-btn > .btn, #FileUpload1 :last-child.input-group-btn > .btn-group > .btn, #FileUpload1 :first-child.input-group-btn > :not(:first-child).btn, FileUpload1 :first-child.input-group-btn > :not(:first-child).btn-group > .btn
+{
+   border-bottom-left-radius: 0px;
+   border-top-left-radius: 0px;
+}
+#FileUpload1 :last-child.input-group-btn > .btn, FileUpload1 :last-child.input-group-btn > .btn-group
+{
+   margin-left: -1px;
+}
+#FlexContainer1
+{
+   display: -webkit-flex;
+   display: flex;
+   position: relative;
+   padding: 10px 10px 10px 10px;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: nowrap;
+   flex-wrap: nowrap;
+   -webkit-justify-content: space-around;
+   justify-content: space-around;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-align-content: flex-start;
+   align-content: flex-start;
+   margin: 0;
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #CCCCCC;
+   box-sizing: border-box;
+   font-size: 0px;
+}
+#PageFooter1
+{
+   background-clip: padding-box;
+   background-color: transparent;
+   background-image: none;
+   box-sizing: border-box;
+}
+
+</style>
+</html>
